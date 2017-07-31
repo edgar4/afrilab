@@ -96,6 +96,54 @@ function styles()
 
 add_action('wp_enqueue_scripts', 'styles');
 
+function scripts()
+{
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+    wp_enqueue_script('afrilab-script27', get_template_directory_uri() . '/js/jquery-1.12.4.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script26', get_template_directory_uri() . '/js/wow.js', '', '', true);
+    wp_enqueue_script('afrilab-script25', get_template_directory_uri() . '/js/bootstrap.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script24', get_template_directory_uri() . '/js/jquery.bxslider.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script23', get_template_directory_uri() . '/js/owl.carousel.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script22', get_template_directory_uri() . '/js/validation.js', '', '', true);
+    wp_enqueue_script('afrilab-script21', get_template_directory_uri() . '/js/jquery.mixitup.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script20', get_template_directory_uri() . '/js/jquery.fancybox.pack.js', '', '', true);
+    wp_enqueue_script('afrilab-script19', get_template_directory_uri() . '/js/jquery.appear.js', '', '', true);
+    wp_enqueue_script('afrilab-script18', get_template_directory_uri() . '/js/isotope.js', '', '', true);
+    wp_enqueue_script('afrilab-script17', get_template_directory_uri() . '/js/jquery.prettyPhoto.js', '', '', true);
+    wp_enqueue_script('afrilab-script16', get_template_directory_uri() . '/js/jquery.bootstrap-touchspin.js', '', '', true);
+    wp_enqueue_script('afrilab-script15', get_template_directory_uri() . '/js/jquery-ui.js', '', '', true);
+    wp_enqueue_script('afrilab-script14', get_template_directory_uri() . '/js/jquery.polyglot.language.switcher.js', '', '', true);
+    wp_enqueue_script('afrilab-script12', get_template_directory_uri() . '/js/html5lightbox.js', '', '', true);
+    wp_enqueue_script('afrilab-script612', get_template_directory_uri() . '/js/jquery.themepunch.tools.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script11', get_template_directory_uri() . '/js/jquery.themepunch.revolution.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script10', get_template_directory_uri() . '/js/revolution.extension.actions.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script9', get_template_directory_uri() . '/js/revolution.extension.carousel.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script8', get_template_directory_uri() . '/js/revolution.extension.kenburn.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script7', get_template_directory_uri() . '/js/revolution.extension.layeranimation.min.js', '', '', true);
+
+    wp_enqueue_script('afrilab-script6', get_template_directory_uri() . '/js/revolution.extension.migration.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script5', get_template_directory_uri() . '/js/revolution.extension.navigation.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script4', get_template_directory_uri() . '/js/revolution.extension.parallax.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script3', get_template_directory_uri() . '/js/revolution.extension.slideanims.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script2', get_template_directory_uri() . '/js/revolution.extension.video.min.js', '', '', true);
+    wp_enqueue_script('afrilab-script1', get_template_directory_uri() . '/js/custom.js', '', '', true);
+
+}
+
+add_action('wp_enqueue_scripts', 'scripts');
+
 
 add_filter('show_admin_bar', '__return_false');
 /**
