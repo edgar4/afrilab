@@ -51,12 +51,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-<?php
-wp_nav_menu( array(
-	'theme_location' => 'menu-1',
-	'menu_id'        => 'primary-menu',
-) );
-?>
+
 <?php
 get_sidebar();
 get_footer();

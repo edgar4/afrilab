@@ -75,8 +75,8 @@ if (!function_exists('afrilab_setup')) :
          * @link https://codex.wordpress.org/Theme_Logo
          */
         add_theme_support('custom-logo', array(
-            'height' => 250,
-            'width' => 250,
+            'height' => 244,
+            'width' => 45,
             'flex-width' => true,
             'flex-height' => true,
         ));
@@ -88,12 +88,16 @@ function styles()
 {
     wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
     wp_enqueue_style('boostrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
-    wp_enqueue_style('afrilab-style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('afrilab-responsive', get_template_directory_uri() . '/css/responsive.css');
+    wp_enqueue_style('afrilab-fontello', get_template_directory_uri() . '/css/fontello.css');
+    wp_enqueue_style('afrilab-style', get_template_directory_uri() . '/css/style.css');
 
 }
 
 add_action('wp_enqueue_scripts', 'styles');
 
+
+add_filter('show_admin_bar', '__return_false');
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *

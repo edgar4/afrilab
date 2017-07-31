@@ -8,19 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- For IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <!-- master stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Responsive stylesheet -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- Favicon -->
-
     <!-- Fixing Internet Explorer-->
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="js/html5shiv.js"></script>
     <![endif]-->
 
     <style type="text/css">
@@ -29,8 +19,7 @@
         }
     </style>
 
-    <link rel="stylesheet" href="css/fontello.css" type="text/css">
-    <?php wp_head()?>
+    <?php wp_head() ?>
 </head>
 
 <body>
@@ -45,8 +34,8 @@
                     <div class="mainmenu-bg clearfix">
                         <!--Start logo-->
                         <div class="logo pull-left">
-                            <a href="index.html">
-                                <img src="img/logo.png" alt="Awesome Logo">
+                            <a href="">
+                               <?php the_custom_logo();?>
                             </a>
                         </div>
                         <!--End logo-->
@@ -61,14 +50,13 @@
                                 </button>
                             </div>
                             <div class="navbar-collapse collapse clearfix">
-                                <ul class="navigation clearfix">
-                                    <li class="current"><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">ABOUT US</a></li>
-                                    <li><a href="services.html">Services</a></li>
-                                    <li><a href="project.html">Gallery</a>
-                                    </li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                </ul>
+                                <?php
+                                wp_nav_menu( array(
+                                    'theme_location' => 'menu-1',
+                                    'menu_id'        => 'primary-menu',
+                                    'menu_class'     => 'navigation clearfix',
+                                ) );
+                                ?>
                             </div>
                         </nav>
                         <!--End mainmenu-->
