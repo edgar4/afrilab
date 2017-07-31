@@ -98,18 +98,6 @@ add_action('wp_enqueue_scripts', 'styles');
 
 function scripts()
 {
-//
-//
-
-
-
-
-
-
-
-
-
-
 
     wp_enqueue_script('afrilab-script27', get_template_directory_uri() . '/js/jquery-1.12.4.min.js', '', '', true);
     wp_enqueue_script('afrilab-script26', get_template_directory_uri() . '/js/wow.js', '', '', true);

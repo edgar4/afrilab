@@ -62,20 +62,20 @@
                         <!--End mainmenu-->
                         <!--Start mainmenu right box-->
                         <div class="mainmenu-right-box pull-right clearfix">
-                            <div class="outer-search-box">
-                                <div class="seach-toggle"><i class="fa fa-search"></i></div>
-                                <ul class="search-box">
-                                    <li>
-                                        <form method="post" action="index.html">
-                                            <div class="form-group">
-                                                <input type="search" name="search" placeholder="Search Here"
-                                                       required="">
-                                                <button type="submit"><i class="fa fa-search"></i></button>
-                                            </div>
-                                        </form>
-                                    </li>
-                                </ul>
-                            </div>
+<!--                            <div class="outer-search-box">-->
+<!--                                <div class="seach-toggle"><i class="fa fa-search"></i></div>-->
+<!--                                <ul class="search-box">-->
+<!--                                    <li>-->
+<!--                                        <form method="post" action="index.html">-->
+<!--                                            <div class="form-group">-->
+<!--                                                <input type="search" name="search" placeholder="Search Here"-->
+<!--                                                       required="">-->
+<!--                                                <button type="submit"><i class="fa fa-search"></i></button>-->
+<!--                                            </div>-->
+<!--                                        </form>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
                             <div class="quote-button">
                                 <a href="#">Get a Quote</a>
                             </div>
