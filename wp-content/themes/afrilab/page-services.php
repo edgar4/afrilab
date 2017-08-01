@@ -126,7 +126,7 @@ if (have_posts()) :
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="sec-title pdb-50">
-                                            <h1>Key Benefits of the Service</h1>
+                                            <h1> Why Choose us</h1>
                                             <span class="border"></span>
                                         </div>
                                         <div class="row">
@@ -136,31 +136,26 @@ if (have_posts()) :
                                                         so blinded by desire, that they cannot foresee the pain and
                                                         trouble that are bound to ensue beguiled and demoralized.</p>
                                                     <ul>
-                                                        <li><i class="fa fa-angle-right" aria-hidden="true"></i>Develop
-                                                            new ideas and market them
-                                                        </li>
-                                                        <li><i class="fa fa-angle-right" aria-hidden="true"></i>Build
-                                                            leadership and management skills
-                                                        </li>
-                                                        <li><i class="fa fa-angle-right" aria-hidden="true"></i>Improve
-                                                            manufacturing processes
-                                                        </li>
-                                                        <li><i class="fa fa-angle-right" aria-hidden="true"></i>Build a
-                                                            business strategy and plan
-                                                        </li>
+                                                        <?php if (have_rows('benefits_of_the_services')):
+
+                                                        // loop through the rows of data
+                                                        while (have_rows('benefits_of_the_services')) : the_row(); ?>
+                                                        <li><i class="fa fa-angle-right" aria-hidden="true"></i><?php the_sub_field('benefits') ?>
+                                                        <?php endwhile; endif; ?>
+
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-12">
                                                 <div class="video-holder">
-                                                    <img src="img/video-gallery.jpg" alt="Awesome Video Gallery">
+                                                    <img src="<?php echo get_stylesheet_directory_uri()?>/img/video-gallery.jpg" alt=" Video Gallery">
                                                     <div class="overlay-gallery">
                                                         <div class="icon-holder">
                                                             <div class="icon">
                                                                 <a class="html5lightbox"
                                                                    title="Consultive Video Gallery"
-                                                                   href="https://www.youtube.com/watch?v=-VW_tLcGgwA"><img
-                                                                        src="img/play-btn.png" alt="Play Button"></a>
+                                                                   href="<?php the_field('video')?>"><img
+                                                                        src="<?php echo get_stylesheet_directory_uri()?>/img/play-btn.png" alt="Play Button"></a>
                                                             </div>
                                                         </div>
                                                     </div>
