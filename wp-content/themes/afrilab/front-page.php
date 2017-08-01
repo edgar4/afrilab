@@ -259,9 +259,9 @@ if (have_posts()) :
                                 <p>Please find below contact details <br>and contact us today!</p>
                             </div>
                             <ul>
-                                <li><span class="fa fa-phone"></span>Phone: +321 456 78 901</li>
-                                <li><span class="fa fa-envelope"></span>Mailus@Consultive.com</li>
-                                <li><span class="fa fa-clock-o"></span>Apple Street, New York, USA</li>
+                                <li><span class="fa fa-phone"></span>Phone: <?php the_field('phone')?></li>
+                                <li><span class="fa fa-envelope"></span><?php the_field('email')?></li>
+                                <li><span class="fa fa-clock-o"></span><?php the_field('location')?></li>
                             </ul>
                         </div>
                     </div>
@@ -272,27 +272,6 @@ if (have_posts()) :
                                 <span class="border"></span>
                             </div>
                             <?php echo do_shortcode('[contact-form-7 id="123" title="Contact form 1"]')?>
-<!--                            <form id="request-form" name="request-form" action="inc/sendmail.php" method="post"-->
-<!--                                  novalidate="novalidate">-->
-<!--                                <div class="row">-->
-<!--                                    <div class="col-md-6">-->
-<!--                                        <input type="text" name="form_name" value="" placeholder="Name *" required=""-->
-<!--                                               aria-required="true">-->
-<!--                                        <input type="text" name="form_phone" value="" placeholder="Ph Num">-->
-<!--                                    </div>-->
-<!--                                    <div class="col-md-6">-->
-<!--                                        <input type="email" name="form_email" value="" placeholder="Email *" required=""-->
-<!--                                               aria-required="true">-->
-<!---->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="row">-->
-<!--                                    <div class="col-md-12">-->
-<!--                                        <button class="thm-btn bgclr-1" type="submit">Submit Now</button>-->
-<!---->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </form>-->
                         </div>
                     </div>
                 </div>

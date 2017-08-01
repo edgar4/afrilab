@@ -17,14 +17,14 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="copyright-text">
-                    <p>Copyrights © 2017 All Rights Reserved, Powered by <a href="#">Consultive.</a></p>
+                    <p>Copyrights © 2017 All Rights Reserved, Powered by <a href="http://www.tinker.co.ke" target="_blank">Tinker.</a></p>
                 </div>
             </div>
             <div class="col-md-4">
                 <ul class="footer-menu">
-                    <li><a href="#">Legal</a></li>
-                    <li><a href="#">Sitemap</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+<!--                    <li><a href="#">Legal</a></li>-->
+<!--                    <li><a href="#">Sitemap</a></li>-->
+<!--                    <li><a href="#">Privacy Policy</a></li>-->
                 </ul>
             </div>
         </div>
