@@ -76,6 +76,10 @@ if (have_posts()) :
                                     <span class="border"></span>
                                 </div>
                                 <div class="row">
+                                    <?php if (have_rows('tippers')):
+
+                                    // loop through the rows of data
+                                    while (have_rows('tippers')) : the_row(); ?>
                                     <!--Start single item-->
                                     <div class="col-lg-4 col-md-12">
                                         <div class="single-item">
@@ -83,41 +87,15 @@ if (have_posts()) :
                                                 <span class="flaticon-business-1"></span>
                                             </div>
                                             <div class="text-holder">
-                                                <h3>Talent &amp; HR Analytics</h3>
-                                                <p>Which of ever undertke laborious physical exercised excepts.</p>
-                                                <a href="##">Know More</a>
+                                                <h3><?php the_sub_field('title') ?></h3>
+                                                <p><?php the_sub_field('content') ?></p>
+<!--                                                <a href="##">Know More</a>-->
                                             </div>
                                         </div>
                                     </div>
                                     <!--End single item-->
-                                    <!--Start single item-->
-                                    <div class="col-lg-4 col-md-12">
-                                        <div class="single-item">
-                                            <div class="icon-holder">
-                                                <span class="flaticon-graphic"></span>
-                                            </div>
-                                            <div class="text-holder">
-                                                <h3>Fraud &amp; Risk Analytics</h3>
-                                                <p>Great explorer the master builder working human happiness.</p>
-                                                <a href="##">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--End single item-->
-                                    <!--Start single item-->
-                                    <div class="col-lg-4 col-md-12">
-                                        <div class="single-item">
-                                            <div class="icon-holder">
-                                                <span class="flaticon-technology-1"></span>
-                                            </div>
-                                            <div class="text-holder">
-                                                <h3>Marketing Analytics.</h3>
-                                                <p>Chooses to enjoy a pleasure that has no anoing consequences.</p>
-                                                <a href="##">Know More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--End single item-->
+                                    <?php endwhile; endif; ?>
+
                                 </div>
                             </div>
                             <!--End Specific Services-->
@@ -132,9 +110,7 @@ if (have_posts()) :
                                         <div class="row">
                                             <div class="col-lg-6 col-md-12">
                                                 <div class="text-holder">
-                                                    <p>Beguiled and demoralized by the charms of pleasure of the moment,
-                                                        so blinded by desire, that they cannot foresee the pain and
-                                                        trouble that are bound to ensue beguiled and demoralized.</p>
+                                                    <p><?php the_field('benefits_content')?></p>
                                                     <ul>
                                                         <?php if (have_rows('benefits_of_the_services')):
 
