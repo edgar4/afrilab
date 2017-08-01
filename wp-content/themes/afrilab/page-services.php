@@ -175,42 +175,23 @@ if (have_posts()) :
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="accordion-box">
+
+                                        <?php if (have_rows('quizes')):
+
+                                        // loop through the rows of data
+                                        while (have_rows('quizes')) : the_row(); ?>
                                         <!--Start single accordion box-->
                                         <div class="accordion accordion-block">
                                             <div class="accord-btn">
-                                                <h4>What is the procedure to join with your company?</h4>
+                                                <h4><?php the_sub_field('question') ?></h4>
                                             </div>
                                             <div class="accord-content">
-                                                <p>The master-builder of human happiness. No one rejects, dislikes, or
-                                                    avoids pleasure itself, because it is pleasure, but because those
-                                                    who do not know how to pursue pleasure. </p>
+                                                <p><?php the_sub_field('answer') ?> </p>
                                             </div>
                                         </div>
                                         <!--End single accordion box-->
-                                        <!--Start single accordion box-->
-                                        <div class="accordion accordion-block">
-                                            <div class="accord-btn active">
-                                                <h4>Do you give any offer for premium customer?</h4>
-                                            </div>
-                                            <div class="accord-content collapsed">
-                                                <p>The master-builder of human happiness. No one rejects, dislikes, or
-                                                    avoids pleasure itself, because it is pleasure, but because those
-                                                    who do not know how to pursue pleasure. </p>
-                                            </div>
-                                        </div>
-                                        <!--End single accordion box-->
-                                        <!--Start single accordion box-->
-                                        <div class="accordion accordion-block last">
-                                            <div class="accord-btn last">
-                                                <h4>What makes you special from others?</h4>
-                                            </div>
-                                            <div class="accord-content last">
-                                                <p>The master-builder of human happiness. No one rejects, dislikes, or
-                                                    avoids pleasure itself, because it is pleasure, but because those
-                                                    who do not know how to pursue pleasure. </p>
-                                            </div>
-                                        </div>
-                                        <!--End single accordion box-->
+                                        <?php endwhile; endif; ?>
+
                                     </div>
                                 </div>
                             </div>
@@ -221,40 +202,7 @@ if (have_posts()) :
                                     <h1>Request Free Consultation</h1>
                                     <span class="border"></span>
                                 </div>
-                                <form id="consultation-form" action="##" method="post" novalidate="novalidate">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <input type="text" name="form_name" value="" placeholder="Your Name*"
-                                                   required="" aria-required="true">
-                                            <input type="email" name="form_email" value="" placeholder="Your Mail*"
-                                                   required="" aria-required="true">
-                                            <select class="selectmenu" id="ui-id-1" style="display: none;">
-                                                <option selected="selected">Select Service</option>
-                                                <option>Business Growth</option>
-                                                <option>Sustainability</option>
-                                                <option>Performance</option>
-                                                <option>Advanced Analytics</option>
-                                                <option>Organization</option>
-                                                <option>Customer Insights</option>
-                                            </select><span
-                                                class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all"
-                                                tabindex="0" id="ui-id-1-button" role="combobox" aria-expanded="false"
-                                                aria-autocomplete="list" aria-owns="ui-id-1-menu"
-                                                aria-haspopup="true" style="width: 159px;"><span
-                                                    class="ui-icon ui-icon-triangle-1-s"></span><span
-                                                    class="ui-selectmenu-text">Select Service</span></span>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <textarea name="form_message" placeholder="Your Message.." required=""
-                                                      aria-required="true"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <button class="thm-btn bgclr-1" type="submit">Submit Now</button>
-                                        </div>
-                                    </div>
-                                </form>
+                                <?php echo do_shortcode('[contact-form-7 id="124" title="Contact us form"]') ?>
                             </div>
                             <!--End Consultation form-->
                         </div>
